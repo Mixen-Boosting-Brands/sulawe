@@ -1,0 +1,153 @@
+.menu {
+    @include blur-rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 50vh;
+    padding: 0 92px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: -633px;
+    left: 0;
+    opacity: 0;
+    z-index: -1;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 76%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 76%);
+    @include transition-menu(0.8s);
+
+    #cerrar-menu {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 2rem;
+
+        color: $primary;
+        text-decoration: none;
+    }
+
+    .menu-contenido {
+        width: 100%;
+        text-align: center;
+        // color: ;
+
+        .logo {
+            width: 280px;
+            margin-bottom: 20px;
+        }
+
+        nav,
+        #btn-contacto,
+        #social,
+        #contacto-menu {
+            width: 100%;
+            float: left;
+            display: block;
+        }
+
+        nav,
+        #social,
+        #contacto-menu {
+            width: 100%;
+            float: left;
+            display: block;
+
+            a {
+                // color: ;
+                text-decoration: none;
+
+                &:hover,
+                &:focus {
+                    // color: ;
+                }
+            }
+        }
+
+        nav {
+            width: 100%;
+            float: left;
+            line-height: 2.4rem;
+            margin: 30px auto;
+            text-align: center;
+
+            ul {
+                li {
+                    position: relative;
+
+                    a {
+                        span {
+                            color: $primary;
+                            font-style: italic;
+                            margin-right: 5px;
+                        }
+                    }
+    
+                    &:after {
+                        position: absolute;
+                        right: -14px;
+                        top: 1px;
+                        content: '/';
+                    }
+                }
+    
+                li:last-child {
+                    &:after {
+                        display: none;
+                    }
+                }
+    
+                .list-inline-item:not(:last-child) {
+                    margin-right: 1rem;
+                }
+            }
+        }
+
+        #btn-contacto {
+            margin: 0 auto 30px;
+        }
+
+        #social {
+            font-size: 2rem;
+        }
+
+        #contacto-menu {
+            // color: ;
+        }
+    }
+
+    &::after {
+        position: absolute;
+        bottom: -40px;
+        @include absolute-center-x;
+        content: '';
+        background-color: $primary;
+        width: 3px;
+        height: 30%;
+    }
+}
+
+.menu-abierto {
+    top: 0;
+    opacity: 1;
+    z-index: 9999;
+}
+
+#backdrop {
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    display: none;
+    z-index: -2;
+    transition: backdrop-filter 0.2s;
+    backdrop-filter: blur(4px) opacity(0);
+}
+
+.backdrop-opacity-1 {
+    backdrop-filter: blur(4px) opacity(1);
+    opacity: 1 !important;
+    display: block !important;
+    z-index: 998 !important;
+}

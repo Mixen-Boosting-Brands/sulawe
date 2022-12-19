@@ -1,0 +1,38 @@
+{
+  "name": "sulawe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js' --directory --port 7777",
+    "build": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mixen-Boosting-Brands/sulawe.git"
+  },
+  "author": "Luis Carlos Pando <hey@luiscarlospando.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mixen-Boosting-Brands/sulawe/issues"
+  },
+  "homepage": "https://github.com/Mixen-Boosting-Brands/sulawe#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "babel-loader": "^8.2.5",
+    "browser-sync": "^2.27.9",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.2.1",
+    "@popperjs/core": "^2.11.6",
+    "animate.css": "^4.1.1",
+    "aos": "^2.3.4",
+    "bootstrap": "^5.2.3",
+    "jquery": "^3.6.2"
+  }
+}

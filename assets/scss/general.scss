@@ -1,0 +1,271 @@
+// General styles
+html,
+body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $bg-main;
+    color: $font-main-color;
+    font-family: 'gordita', sans-serif;
+    position: relative;
+}
+
+header,
+section,
+footer {
+    width: 100%;
+    float: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'flatlineregular', sans-serif;
+}
+
+.mh-100 {
+    min-height: 100vh;
+}
+
+a {
+    color: $font-main-color;
+    text-decoration: none;
+    @include transition(ease, 0.3s);
+
+    &:hover,
+    &:focus {
+        color: $font-link-color;
+    }
+}
+
+.py-60 {
+    padding: 60px 0;
+}
+
+.pt-60 {
+    padding-top: 60px;
+}
+
+.pb-60 {
+    padding-bottom: 60px;
+}
+
+.py-30 {
+    padding: 30px 0;
+}
+
+.pt-30 {
+    padding-top: 30px;
+}
+
+.pb-30 {
+    padding-bottom: 30px;
+}
+
+.whatsapp {
+    @include whatsapp-button;
+}
+
+header#navbar {
+    width: 100%;
+    height: auto;
+    padding: 15px 30px;
+    // color: ;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    @include transition(ease, 0.2s);
+
+    #logo-navbar {
+        width: 145px;
+        @include transition(ease, 0.2s);
+    }
+
+    #mburger {
+        color: $font-main-color;
+
+        &:hover,
+        &:focus {
+            color: $font-link-color !important;
+            -webkit-filter: drop-shadow(0 0 7px rgba(250, 59, 49, 0.5)) !important;
+                    filter: drop-shadow(0 0 7px rgba(250, 59, 49, 0.5)) !important;
+        }
+    }
+}
+
+.navbar-scroll {
+    padding: 10px 30px !important;
+    @include blur-rgba(0, 0, 0, 0.5);
+    @include transition(ease, 0.3s);
+
+    #logo-navbar {
+        // width: 60px !important;
+    }
+
+    #mburger {
+        // color: !important;
+    }
+}
+
+#mapa {
+    line-height: 0;
+    
+    p {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+#navbar {
+    font-size: 2rem;
+}
+
+.content {
+    .container-fluid {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .scrolling-photo {
+        min-width: 100%;
+        border-bottom: 1px solid #000;
+    }
+}
+
+/*
+.banner {
+    min-height: 100vh;
+}
+
+#banner-top {
+    @include background('../images/bg-banner-top.jpg', center, cover);
+}
+
+@for $i from 1 through 5 {
+    #banner-#{$i} {
+        @include background('../images/bg-#{$i}.jpg', center, cover);
+    }
+}
+
+#banner-5 {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+*/
+
+footer {
+    min-height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+
+    #logo-footer {
+        margin-bottom: 30px;
+        width: 60%;
+    }
+
+    nav {
+        ul {
+            li {
+                position: relative;
+
+                &:after {
+                    position: absolute;
+                    right: -14px;
+                    top: 1px;
+                    content: '/';
+                }
+            }
+
+            li:last-child {
+                &:after {
+                    display: none;
+                }
+            }
+
+            .list-inline-item:not(:last-child) {
+                margin-right: 1rem;
+            }
+        }
+    }
+
+    &::after {
+        position: absolute;
+        bottom: 20px;
+        @include absolute-center-x;
+        content: '';
+        background-color: #515E44;
+        width: 3px;
+        height: 18%;
+    }
+}
+
+.modal-content {
+    @include blur-rgba(0, 0, 0, 0.5);
+    border-radius: 0;
+    text-align: center;
+
+    .modal-header {
+        border-bottom: none; 
+    }
+
+    .modal-body {
+        padding: 80px;
+        
+        p,
+        ul {
+            line-height: 2.6rem;
+        }
+
+        .title {
+            color: $primary;
+            text-transform: uppercase;
+            letter-spacing: 14px;
+    
+            span {
+                color: $font-main-color;
+                font-size: 1.6rem;
+                font-style: italic;
+                vertical-align: middle;
+            }
+        }
+
+        address {
+            margin: 0;
+        }
+
+        .separador {
+            background-color: $primary;
+            width: 2px;
+            height: 50px;
+            margin: 30px auto;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                top: 23px;
+                left: -2px;
+                background-color: $primary;
+                border-radius: 50%;
+                width: 6px;
+                height: 6px;
+                content: '';
+            }
+        }
+    }
+
+    .modal-footer {
+        border-top: none;
+    }
+}

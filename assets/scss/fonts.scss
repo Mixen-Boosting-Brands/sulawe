@@ -1,0 +1,39 @@
+// Fonts
+$fa-font-path: "../fonts/webfonts" !default;
+
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/regular';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/solid';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/brands';
+
+@font-face {
+    font-family: 'flatlineregular';
+    src: url('../fonts/up_up_creative_-_flatline_regular-webfont.woff2') format('woff2'),
+         url('../fonts/up_up_creative_-_flatline_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gordita';
+    font-weight: 300;
+    src: url('../fonts/Gordita-Light.woff') format('woff2');
+}
+
+@font-face {
+    font-family: 'gordita';
+    font-weight: 400;
+    src: url('../fonts/Gordita-Regular.woff') format('woff2');
+}
+
+@font-face {
+    font-family: 'gordita';
+    font-weight: 500;
+    src: url('../fonts/Gordita-Medium.woff') format('woff2');
+}
+
+@font-face {
+    font-family: 'gordita';
+    font-weight: 700;
+    src: url('../fonts/Gordita-Bold.woff') format('woff2');
+}

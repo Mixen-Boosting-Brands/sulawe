@@ -1,15 +1,248 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-MX">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SULÁWE MX / CUU</title>
-    <meta name="description" content="COMING SOON D1 - SULÁWE MX / CUU">
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
-<body class="w-full h-screen">
-    <div class="w-full h-screen bg-[url('assets/images/Formato-1080.jpg')] bg-cover bg-top md:hidden"></div>
-    <div class="w-full h-screen bg-[url('assets/images/Formato-1920.jpg')] bg-cover bg-top hidden md:block"></div>
+<body>
+    <div id="backdrop"></div>
+    <div class="menu">
+        <a id="cerrar-menu" href="javascript:void(0)">
+            <i class="fas fa-times"></i>
+        </a>
+        <div class="menu-contenido">
+            <a class="anchor" id="btn-logo" href="#">
+                <img class="logo img-fluid" src="./assets/images/logo-grande.png" alt="">
+            </a>
+            <nav>
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a id="btn-nav-1" href="/">
+                            <span>01</span> Home
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a id="btn-nav-2" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#about-us">
+                            <span>02</span> About Us
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a id="btn-nav-3" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#reservations">
+                            <span>03</span> Reservations
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a id="btn-nav-4" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#menu">
+                            <span>04</span>  Menu
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a id="btn-nav-5" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#contact">
+                            <span>05</span> Contact & Hours
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- div id="social">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a href="#" target="_blank">
+                            <i class="fab fa-facebook-square"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" target="_blank">
+                            <i class="fab fa-twitter-square"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" target="_blank">
+                            <i class="fab fa-instagram-square"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div -->
+            
+            <!-- div id="contacto-menu">
+                <ul class="list-unstyled">
+                    <li>
+                        <i class="far fa-envelope"></i> <a href="mailto:cmail@domain.com">mail@domain.com</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i> <a href="tel:+526141234567">(614) 123 4567</a>
+                    </li>
+                </ul>
+            </div -->
+        </div>
+    </div>
+
+    <header id="navbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 my-auto">
+                    <a href="#">
+                        <img id="logo-navbar" class="logo img-fluid" src="./assets/images/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="col-8 my-auto text-end">
+                    <a id="mburger" href="javascript:void(0)">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <img src="./assets/images/bg-banner-top.jpg" alt="" class="img-fluid scrolling-photo">
+                    <img src="./assets/images/bg-1.jpg" alt="" class="img-fluid scrolling-photo">
+                    <img src="./assets/images/bg-2.jpg" alt="" class="img-fluid scrolling-photo">
+                    <img src="./assets/images/bg-3.jpg" alt="" class="img-fluid scrolling-photo">
+                    <img src="./assets/images/bg-4.jpg" alt="" class="img-fluid scrolling-photo">
+                    <img src="./assets/images/bg-5.jpg" alt="" class="img-fluid scrolling-photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row" data-aos="fade-up">
+                <div class="col">
+                    <a href="#">
+                        <img id="logo-footer" class="logo img-fluid" src="./assets/images/logo-grande.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div
+                class="row"
+                data-aos="fade-up"
+                data-aos-delay="300"
+            >
+                <div class="col">
+                    <nav>
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <a href="/">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#about-us">
+                                    About Us
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#reservations">
+                                    Reservations
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#menu">
+                                    Menu
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#contact">
+                                    Contact & Hours
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <!-- About Us -->
+    <div class="modal fade" id="about-us" tabindex="-1" aria-labelledby="about-us" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h1 class="title">About Us</h1>
+                    <div class="separador"></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni deserunt unde, fugiat harum laboriosam non, commodi laborum tenetur praesentium eveniet tempora eius quae doloremque itaque ea, optio quos voluptate!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reservations -->
+    <div class="modal fade" id="reservations" tabindex="-1" aria-labelledby="reservations" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h1 class="title">Reservations</h1>
+                    <div class="separador"></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni deserunt unde, fugiat harum laboriosam non, commodi laborum tenetur praesentium eveniet tempora eius quae doloremque itaque ea, optio quos voluptate!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu -->
+    <div class="modal fade" id="menu" tabindex="-1" aria-labelledby="menu" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h1 class="title">Menu</h1>
+                    <div class="separador"></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni deserunt unde, fugiat harum laboriosam non, commodi laborum tenetur praesentium eveniet tempora eius quae doloremque itaque ea, optio quos voluptate!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact & Hours -->
+    <div class="modal fade" id="contact" tabindex="-1" aria-labelledby="contact" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h1 class="title">Contact <span>&</span> Hours</h1>
+                    <div class="separador"></div>
+                    <ul class="list-unstyled">
+                        <li>
+                            <address>
+                                Citadela, Condominio Quorum, Local 101, Chihuahua, México
+                            </address>
+                        </li>
+                        <li>Lunes - Cerrado</li>
+                        <li>Martes a Sábado 13:00 - 00:00 hrs.</li>
+                        <li>Domingos 13:00 - 18:00 hrs.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- a href="https://wa.me/52614?text=Hola%20FOO%20BAR,%20necesito%20información." class="whatsapp" target="_blank"><i class="fab fa-whatsapp whatsapp-icon"></i></a -->
+
+    <script src="./assets/js/app.bundle.js"></script>
 </body>
 </html>
