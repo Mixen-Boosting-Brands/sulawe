@@ -52,7 +52,6 @@ document.getElementById("btn-nav-2").addEventListener("click", cerrarMenu, false
 document.getElementById("btn-nav-3").addEventListener("click", cerrarMenu, false);
 document.getElementById("btn-nav-4").addEventListener("click", cerrarMenu, false);
 document.getElementById("btn-nav-5").addEventListener("click", cerrarMenu, false);
-document.getElementById("btn-contacto").addEventListener("click", cerrarMenu, false);
 
 function cerrarMenu() {
     $('.menu').removeClass('menu-abierto');
