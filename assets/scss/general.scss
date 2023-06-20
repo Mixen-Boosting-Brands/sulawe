@@ -246,6 +246,26 @@ footer {
     }
 }
 
+.jumbotron {
+    width: 100%;
+    min-height: 100vh;
+    float: left;
+    background-color: #505E44;
+    color: #F9B97B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        color: #F9B97B;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+}
+
 .video {
     height: 100vh;
     width: 100%;
@@ -404,7 +424,7 @@ footer {
     justify-content: center;
     object-fit: cover;
 }
-.footer-video video{
+.footer-video video {
     height: 100vh;
     width: 100%;
     justify-content: center;
@@ -430,45 +450,52 @@ footer {
     display: none;
 }
 
-@media only screen and (max-width : 900px){
+@media only screen and (max-width : 900px) {
     .celular{
         display: block;
     }
+
     .desktop{
         display: none;
     }
+
     .footer-video{
         display: none;
     }
+
     .footer-video{
         display: none;
     }
+
     .overlay{
         background-color: transparent;
         position: relative;
     }
 }
 
-.desk-footer{
+.desk-footer {
     display: block;
 }
-.tel-footer{
+
+.tel-footer {
     display: none;
 }
-@media only screen and (max-width : 900px){
+
+@media only screen and (max-width : 900px) {
     .desk-footer{
         display: none;
     }
+
     .tel-footer{
         display: block;
     }
 }
 
-
-@media only screen and (max-width : 900px){
+@media only screen and (max-width : 900px) {
     .modal-content .modal-body {
         padding: 16px !important;
-      }
+    }
+
     .modal-content .modal-body .title{
         letter-spacing: 10px !important;
     }
