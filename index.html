@@ -1,15 +1,538 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-MX">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SULÁWE MX / CUU</title>
-    <meta name="description" content="COMING SOON D1 - SULÁWE MX / CUU">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#333333">
+    <meta name="theme-color" content="#333333">
+
+    <!-- Simple icon  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" integrity="sha512-QKC1UZ/ZHNgFzVKSAhV5v5j73eeL9EEN289eKAEFaAjgAiobVAnVv/AGuPbXsKl1dNoel3kNr6PYnSiTzVVBCw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- slick js -->
+    <link rel="stylesheet" href="./assets/slick/slick.css">
+    <link rel="stylesheet" href="./assets/slick/slick-theme.css">
+
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
 </head>
-<body class="w-full h-screen">
-    <div class="w-full h-screen bg-[url('assets/images/Formato-1080.jpg')] bg-cover bg-top md:hidden"></div>
-    <div class="w-full h-screen bg-[url('assets/images/Formato-1920.jpg')] bg-cover bg-top hidden md:block"></div>
+
+<body>
+    <div id="backdrop"></div>
+    <div class="menu">
+        <a id="cerrar-menu" href="javascript:void(0)">
+            <!-- <i class="fas fa-times"></i> -->
+            <i class="fa-solid fa-xmark"></i>
+        </a>
+        <div class="menu-contenido">
+            <a class="anchor" id="btn-logo" href="#">
+                <img class="logo img-fluid" src="./assets/images/logo-grande.png" alt="">
+            </a>
+            <nav>
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a id="btn-nav-1" href="./index.html">
+                            <span>01</span> Inicio
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a id="btn-nav-2" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#about-us">
+                            <span>02</span> Christian Duthoy
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a id="btn-nav-3" href="./menu.html" target="_blank" data-bs-target="#menu">
+                            <span>03</span> Menú
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a id="btn-nav-4" href="javascript:void(0)" data-bs-toggle="modal"
+                            data-bs-target="#reservations">
+                            <span>04</span> Horarios
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a id="btn-nav-5" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#contact">
+                            <span>05</span> Localización
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div id="social">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/SulaweMx" style="font-size: 25px;" target="_blank">
+                            <i class="fab fa-facebook-square"></i>
+                        </a>
+                    </li>
+                    <!-- <li class="list-inline-item">
+                        <a href="#" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li> -->
+                    <!-- <li class="list-inline-item">
+                        <a href="#" target="_blank">
+                            <i class="fab fa-twitter-square"></i>
+                        </a>
+                    </li> -->
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com/sulawemx/" style="font-size: 25px;" target="_blank">
+                            <i class="fab fa-instagram-square"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="contacto-menu">
+                <ul class="list-unstyled">
+                    <li>
+                        <i class="far fa-envelope"></i> <a href="mailto:admin@sulawe.com">admin@sulawe.com</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i> <a href="tel:+526142502328">(614) 250 2328</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <header id="navbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 my-auto">
+                    <a href="#">
+                        <img id="logo-navbar" class="logo img-fluid" src="./assets/images/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="col-8 my-auto text-end">
+                    <a id="mburger" href="javascript:void(0)">
+                        <!-- <i class="fa-solid fa-bars"></i> -->
+                        <i class="icon-menu"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <img src="./assets/images/bg-banner-top.jpg" alt="" class="img-fluid scrolling-photo">
+                    <img src="./assets/images/bg-1.jpg" alt="" class="img-fluid scrolling-photo">
+                    <img src="./assets/images/bg-2.jpg" alt="" class="img-fluid scrolling-photo">
+                    <img src="./assets/images/bg-3.jpg" alt="" class="img-fluid scrolling-photo">
+                    <img src="./assets/images/bg-4.jpg" alt="" class="img-fluid scrolling-photo">
+                    <img src="./assets/images/bg-5.jpg" alt="" class="img-fluid scrolling-photo">
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="celular">
+        <img src="./assets/images/restaurante int/vertical/interior6.webp" class="img-slide" alt="">
+        <img src="./assets/images/chef/vertical/chef4.webp" class="img-slide" alt="">
+        <img src="./assets/images/platillo/vertical/platillos5.webp" class="img-slide" alt="">
+        <img src="./assets/images/drink/vertical/drink2.webp" class="img-slide" alt="">
+        <img src="./assets/images/personal/vertical/personal3.webp" class="img-slide" alt="">
+        <img src="./assets/images/postre/vertical/postre3.webp" class="img-slide" alt="">
+    </section>
+
+    <section class="desktop">
+
+        <!-- video -->
+        <!-- desktop -->
+        <div class="banner-video">
+            <video src="./assets/video/videoSulawe.mp4" autoplay="true" muted loop class="video"></video>
+        </div>
+        <!-- telefono -->
+        <!-- <div class="banner-img">
+            <img src="./assets/images/restaurante1.jpg" class="img-slide" alt="">
+        </div> -->
+
+
+        <!-- slide 1  restaurante-->
+        <!-- horizontal -->
+        <div class="slide3">
+            <img src="./assets/images/restaurante int/horizontal/interiores2.webp" class="img-slide" alt="">
+            <img src="./assets/images/restaurante int/horizontal/interiores1.webp" class="img-slide" alt="">
+            <!-- <img src="./assets/images/personal/horizontal/personal5.webp" class="img-slide" alt=""> -->
+        </div>
+        <!-- vertical -->
+        <div class="slide3-v">
+            <img src="./assets/images/restaurante int/vertical/interior2.webp" class="img-slide" alt="">
+            <img src="./assets/images/restaurante int/vertical/interior3.webp" class="img-slide" alt="">
+            <img src="./assets/images/restaurante int/vertical/interior4.webp" class="img-slide" alt="">
+            <img src="./assets/images/restaurante int/vertical/interior1.webp" class="img-slide" alt="">
+            <img src="./assets/images/preparacion/vertical/preparacion2.webp" class="img-slide" alt="">
+        </div>
+
+        <!-- slide 2 chef -->
+        <!-- horizontal -->
+        <div class="slide1">
+            <img src="./assets/images/chef/horizontal/chef0.webp" class="img-slide" alt="">
+            <img src="./assets/images/chef/horizontal/chef3.webp" class="img-slide" alt="">
+            <img src="./assets/images/chef/horizontal/chef2.webp" class="img-slide" alt="">
+            <!-- <img src="./assets/images/chef/horizontal/chef1.webp" class="img-slide" alt=""> -->
+            <!-- <img src="./assets/images/chef/horizontal/chef5.webp" class="img-slide" alt=""> -->
+        </div>
+        <!-- vertical -->
+        <div class="slide1-v">
+            <img src="./assets/images/chef/vertical/chef1.webp" class="img-slide" alt="">
+            <img src="./assets/images/chef/vertical/chef2.webp" class="img-slide" alt="">
+            <img src="./assets/images/chef/vertical/chef3.webp" class="img-slide" alt="">
+            <img src="./assets/images/chef/vertical/chef4.webp" class="img-slide" alt="">
+        </div>
+
+
+        <!-- slide 3  platillo-->
+        <!-- horizontal -->
+        <div class="slide2">
+            <img src="./assets/images/platillo/horizontal/platillos1.webp" class="img-slide" alt="">
+            <img src="./assets/images/platillo/horizontal/platillos2.webp" class="img-slide" alt="">
+        </div>
+        <!-- vertical -->
+        <div class="slide2-v">
+            <img src="./assets/images/platillo/vertical/platillos1.webp" class="img-slide" alt="">
+            <img src="./assets/images/platillo/vertical/platillos2.webp" class="img-slide" alt="">
+            <img src="./assets/images/platillo/vertical/platillos3.webp" class="img-slide" alt="">
+            <img src="./assets/images/platillo/vertical/platillos4.webp" class="img-slide" alt="">
+        </div>
+
+        <!-- slide 4 drink -->
+        <!-- horizontal -->
+        <div class="slide4">
+            <img src="./assets/images/drink/horizontal/drink5.webp" class="img-slide" alt="">
+            <img src="./assets/images/drink/horizontal/drink3.webp" class="img-slide" alt="">
+            <img src="./assets/images/drink/horizontal/drink1.webp" class="img-slide" alt="">
+        </div>
+        <!-- vertical -->
+        <!-- <div class="slide4">
+            <img src="./assets/images/drink/vertical/drink1.webp" class="img-slide" alt="">
+            <img src="./assets/images/drink/vertical/drink2.webp" class="img-slide" alt="">
+            <img src="./assets/images/drink/vertical/drink3.webp" class="img-slide" alt="">
+            <img src="./assets/images/drink/vertical/drink4.webp" class="img-slide" alt="">
+        </div> -->
+
+
+        <!-- slide 5 personal -->
+        <!-- horizontal -->
+        <div class="slide5">
+            <img src="./assets/images/drink/horizontal/drink2.webp" class="img-slide" alt="">
+            <img src="./assets/images/personal/horizontal/personal3.webp" class="img-slide" alt="">
+        </div>
+        <!-- vertical -->
+        <div class="slide5-v">
+            <img src="./assets/images/personal/vertical/personal1.webp" class="img-slide" alt="">
+            <img src="./assets/images/personal/vertical/personal2.webp" class="img-slide" alt="">
+            <img src="./assets/images/personal/vertical/personal3.webp" class="img-slide" alt="">
+            <img src="./assets/images/personal/vertical/personal4.webp" class="img-slide" alt="">
+        </div>
+
+        <!-- slide 6 postre -->
+        <!-- horizontal -->
+        <div class="slide6">
+            <img src="./assets/images/postre/horizontal/postre1.webp" class="img-slide" alt="">
+            <img src="./assets/images/postre/horizontal/postre2.webp" class="img-slide" alt="">
+        </div>
+        <!-- vertical -->
+        <div class="slide6-v">
+            <img src="./assets/images/postre/vertical/postre1.webp" class="img-slide" alt="">
+            <img src="./assets/images/postre/vertical/postre2.webp" class="img-slide" alt="">
+            <img src="./assets/images/preparacion/vertical/preparacion1.webp" class="img-slide" alt="">
+        </div>
+
+    </section>
+
+
+    <!-- footer desktop -->
+    <footer class="desk-footer">
+        <div class="footer-video">
+            <video src="./assets/video/videoSulawe.mp4" type="video/mp4" autoplay muted loop></video>
+        </div>
+
+        <div class="overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <a href="#">
+                            <img id="logo-footer" class="logo img-fluid" src="./assets/images/logo-grande.png" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <nav>
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <a href="./index.html">
+                                        Inicio
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#about-us">
+                                        Christian Duthoy
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="./menu.html" target="_blank" data-bs-target="#menu">
+                                        Menú
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#reservations">
+                                        Horarios
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#contact">
+                                        Localización
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div id="social">
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a href="https://www.facebook.com/SulaweMx" target="_blank">
+                                <i class="fab fa-facebook-square" style="font-size: 25px;"></i>
+                            </a>
+                        </li>
+                        <!-- <li class="list-inline-item">
+                        <a href="#" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li> -->
+                        <!-- <li class="list-inline-item">
+                        <a href="#" target="_blank">
+                            <i class="fab fa-twitter-square"></i>
+                        </a>
+                    </li> -->
+                        <li class="list-inline-item">
+                            <a href="https://www.instagram.com/sulawemx/" style="font-size: 25px;" target="_blank">
+                                <i class="fab fa-instagram-square"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="contacto-menu">
+                    <ul class="list-unstyled">
+                        <li>
+                            <i class="far fa-envelope"></i> <a href="mailto:admin@sulawe.com">admin@sulawe.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i> <a href="tel:+526142502328">(614) 250 2328</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <footer class="tel-footer">
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <a href="#">
+                        <img id="logo-footer" class="logo img-fluid" src="./assets/images/logo-grande.png" style="margin-top: 32px !important;" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <nav>
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <a href="./index.html">
+                                    Inicio
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#about-us">
+                                    Christian Duthoy
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="./menu.html" target="_blank"
+                                    data-bs-target="#menu">
+                                    Menú
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#reservations">
+                                    Horarios
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#contact">
+                                    Localización
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div id="social">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/SulaweMx" target="_blank">
+                            <i class="fab fa-facebook-square" style="font-size: 25px;"></i>
+                        </a>
+                    </li>
+                    <!-- <li class="list-inline-item">
+                        <a href="#" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li> -->
+                    <!-- <li class="list-inline-item">
+                        <a href="#" target="_blank">
+                            <i class="fab fa-twitter-square"></i>
+                        </a>
+                    </li> -->
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com/sulawemx/" style="font-size: 25px;" target="_blank">
+                            <i class="fab fa-instagram-square"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="contacto-menu">
+                <ul class="list-unstyled">
+                    <li>
+                        <i class="far fa-envelope"></i> <a href="mailto:admin@sulawe.com">admin@sulawe.com</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i> <a href="tel:+526142502328">(614) 250 2328</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    </footer>
+
+
+
+    <!-- Modals -->
+    <!-- About Us -->
+    <div class="modal fade" id="about-us" tabindex="-1" aria-labelledby="about-us" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h1 class="title">Christian Duthoy</h1>
+                    <div class="separador"></div>
+                    <p>Desde muy joven los grandes aromas y texturas de la cocina despertaron su pasión por la
+                        gastronomía, haciendo que mirara a la cocina desde otra perspectiva y siempre con las ganas de
+                        ofrecer un platillo único y lleno de sabor.</p>
+                    <p>Una de las cosas que siempre lo ha motivado a la hora de cocinar son todas esas sensaciones
+                        mágicas que te genera comer algo nuevo, sabroso y único, toda esta combinación que nos hace
+                        sentir una experiencia distinta y te dejará con ganas de probar más.</p>
+                    <p>Christian ha desarrollado conceptos gastronómicos extraordinarios en ciudades como Monterrey y
+                        CDMX, siempre cuidando hasta el más mínimo detalle y sabe perfecto cómo generar excelentes
+                        experiencias culinarias que sin duda te van a encantar.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Horarios -->
+    <div class="modal fade" id="reservations" tabindex="-1" aria-labelledby="reservations" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h1 class="title">Horarios</h1>
+                    <div class="separador"></div>
+                    <p>Lunes - cerrado</p>
+                    <p style="margin-bottom: -8px;">Martes a sábado 13:00 - 00:00</p>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: -8px;">• cierre de cocina 23:00</li>
+                        <li>• cierre de barra 23:00</li>
+                    </ul>
+                    <p style="margin-bottom: -8px;">Domingo 13:00 - 18:00</p>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: -8px;">• cierre de cocina 23:00</li>
+                        <li>• cierre de barra 23:00</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu -->
+    <div class="modal fade" id="menu" tabindex="-1" aria-labelledby="menu" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h1 class="title">Menu</h1>
+                    <div class="separador"></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni deserunt unde, fugiat harum
+                        laboriosam non, commodi laborum tenetur praesentium eveniet tempora eius quae doloremque itaque
+                        ea, optio quos voluptate!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact & Hours -->
+    <div class="modal fade" id="contact" tabindex="-1" aria-labelledby="contact" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- <h1 class="title">Contact <span>&</span> Hours</h1> -->
+                    <h1 class="title">Localización</h1>
+                    <div class="separador"></div>
+                    <ul class="list-unstyled">
+                        <li>
+                            <address>
+                                <a href="https://goo.gl/maps/WEZevedvaDEcaPgw7">Distrito 1 - Citadela Condominio Quorum, Local 101 Chihuahua, México.</a>
+                            </address>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- a href="https://wa.me/52614?text=Hola%20FOO%20BAR,%20necesito%20información." class="whatsapp" target="_blank"><i class="fab fa-whatsapp whatsapp-icon"></i></a -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/slick/slick.min.js"></script>
+    <script src="./assets/src/slick.js"></script>
+    <script src="./assets/js/app.bundle.js"></script>
+
 </body>
+
 </html>
